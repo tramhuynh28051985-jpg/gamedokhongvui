@@ -317,7 +317,7 @@
         <div id="start-screen" class="start-screen">
             <p style="font-size: 16px; color: #5a82ab; font-weight: 800; line-height: 1.6;">
                 15 câu đố xoắn não cực mạnh!<br>
-                Mỗi câu hỏi bạn có <b>10 giây</b> để trả lời.<br>
+                Mỗi câu hỏi bạn có <b>15 giây</b> để trả lời.<br>
                 Cùng thử thách IQ ngay nào! ✨
             </p>
             <button class="big-btn" onclick="startGame()">Bắt Đầu Chơi</button>
@@ -328,7 +328,7 @@
             <div class="header-bar">
                 <div class="q-counter" id="q-counter">Câu 1/15</div>
                 <div class="timer-badge">
-                    ⏱️ <span id="timer-text">10s</span>
+                    ⏱️ <span id="timer-text">15s</span>
                 </div>
             </div>
 
@@ -565,7 +565,7 @@
 
         let currentQIndex = 0;
         let score = 0;
-        let timeLeft = 10;
+        let timeLeft = 15;
         let timerInterval = null;
         let isAnswered = false;
 
@@ -606,7 +606,7 @@
         }
 
         function startTimer() {
-            timeLeft = 10;
+            timeLeft = 15;
             updateTimerUI();
 
             timerInterval = setInterval(() => {
@@ -624,7 +624,7 @@
 
         function updateTimerUI() {
             document.getElementById("timer-text").innerText = `${Math.ceil(timeLeft)}s`;
-            const fillPercent = (timeLeft / 10) * 100;
+            const fillPercent = (timeLeft / 15) * 100;
             document.getElementById("progress-fill").style.width = `${fillPercent}%`;
         }
 
